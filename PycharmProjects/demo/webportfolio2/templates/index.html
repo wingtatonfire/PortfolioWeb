@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Ted's Portfolio</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="static/assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="static/assets/css/noscript.css"/>
+    </noscript>
+</head>
+<body class="index is-preload">
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1 id="logo"><a href="{{ url_for("home") }}">Ted's Portfolio</a></h1>
+        <nav id="nav">
+            <ul>
+                <li class="current"><a style="font-weight:normal" href="{{ url_for('portfolio') }}">My Work</a></li>
+                <li class="current"><a style="font-weight:normal" href="{{ url_for('contact') }}">Contact</a></li>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    {% if request.method == 'GET' %}
+    <section id="banner">
+        <div class="inner">
+            <header>
+                <h2>Hello! I am Ted.</h2>
+            </header>
+            <p> I am a self-taught full stack developer.</p>
+            <footer>
+                <ul class="buttons stacked">
+                    <li><a href="#main" class="button fit scrolly">My Story</a></li>
+                </ul>
+            </footer>
+
+        </div>
+
+    </section>
+    {% elif request.method == 'POST' %}
+    <section id="banner">
+        <div class="inner" id="aboutme">
+            <header>
+                <h2>Thank You</h2>
+                <h2>Message sent successfully</h2>
+            </header>
+            <footer>
+            </footer>
+        </div>
+    </section>
+    {% endif %}
+    <!-- Main -->
+    <article id="main">
+
+        <header class="special container">
+            <span class="icon solid fa-user"></span>
+            <h2>Before turning 30, I had never explored programming.</h2>
+            <p style="font-size:1.5em">Though the journey has been challenging<br>There's an abundance of joy to be
+                found within it</p>
+        </header>
+
+        <!-- One -->
+        <section class="wrapper style2 container special-alt">
+            <div class="row gtr-50">
+                <div class="col-8 col-12-narrower">
+
+                    <header>
+                        <h2>My skills</h2>
+                    </header>
+                    <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum
+                        lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget
+                        commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.</p>
+
+
+                </div>
+                <div class="col-4 col-12-narrower imp-narrower">
+
+                    <ul class="featured-icons">
+                        <li><span class="icon fa-clock"><span class="label">Feature 1</span></span></li>
+                        <li><span class="icon solid fa-volume-up"><span class="label">Feature 2</span></span></li>
+                        <li><span class="icon solid fa-laptop"><span class="label">Feature 3</span></span></li>
+                        <li><span class="icon solid fa-inbox"><span class="label">Feature 4</span></span></li>
+                        <li><span class="icon solid fa-lock"><span class="label">Feature 5</span></span></li>
+                        <li><span class="icon solid fa-cog"><span class="label">Feature 6</span></span></li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Three -->
+        <section class="wrapper style3 container special" id="mywork">
+
+            <header class="major">
+                <h2><strong>MY WORK</strong></h2>
+            </header>
+
+            <div class="row">
+                <div class="col-6 col-12-narrower">
+
+                    <section>
+                        <a href="#" class="image featured"><img src="static/images/morse.jpg" alt=""/></a>
+                        <header>
+                            <h3>A Really Fast Train</h3>
+                        </header>
+                        <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed
+                            blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem
+                            ipsum dolore.</p>
+                    </section>
+
+                </div>
+                <div class="col-6 col-12-narrower">
+
+                    <section>
+                        <a href="#" class="image featured"><img src="static/images/tictactoe.jpg" alt=""/></a>
+                        <header>
+                            <h3>An Airport Terminal</h3>
+                        </header>
+                        <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed
+                            blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem
+                            ipsum dolore.</p>
+                    </section>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-12-narrower">
+
+                    <section>
+                        <a href="#" class="image featured"><img src="static/images/spcae.jpg" alt=""/></a>
+                        <header>
+                            <h3>Hyperspace Travel</h3>
+                        </header>
+                        <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed
+                            blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem
+                            ipsum dolore.</p>
+                    </section>
+
+                </div>
+                <div class="col-6 col-12-narrower">
+
+                    <section>
+                        <a href="#" class="image featured"><img src="static/images/cafe.jpg" alt=""/></a>
+                        <header>
+                            <h3>And Another Train</h3>
+                        </header>
+                        <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed
+                            blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem
+                            ipsum dolore.</p>
+                    </section>
+
+                </div>
+            </div>
+
+            <footer class="major">
+                <ul class="buttons">
+                    <li><a href="{{ url_for('portfolio') }}" class="button">See More</a></li>
+                </ul>
+            </footer>
+
+        </section>
+
+    </article>
+
+    <!-- CTA -->
+    <section id="cta">
+
+        <header>
+            <h2>Got <strong>something</strong> to tell me?</h2>
+        </header>
+        <footer>
+            <ul class="buttons">
+                <li><a href="{{ url_for("contact") }}" class="button primary">Contact Me</a></li>
+            </ul>
+        </footer>
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+
+        <ul class="icons">
+            <li><a href="https://github.com/wingtatonfire" class="icon brands circle fa-github"><span class="label">Github</span></a>
+            </li>
+        </ul>
+
+        <ul class="copyright">
+            <li>&copy; 2024 Wing Tat Lee</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="static/assets/js/jquery.min.js"></script>
+<script src="static/assets/js/jquery.dropotron.min.js"></script>
+<script src="static/assets/js/jquery.scrolly.min.js"></script>
+<script src="static/assets/js/jquery.scrollex.min.js"></script>
+<script src="static/assets/js/browser.min.js"></script>
+<script src="static/assets/js/breakpoints.min.js"></script>
+<script src="static/assets/js/util.js"></script>
+<script src="static/assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Ted's Portfolio</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="static/assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="static/assets/css/noscript.css"/>
+    </noscript>
+    #main {
+    background-image: url("static/images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Adjust to cover the entire area */
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    }
+</head>
+<body class="no-sidebar is-preload">
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1 id="logo"><a href="{{ url_for("home") }}"><span>Ted's Portfolio</span></a></h1>
+        <nav id="nav">
+            <ul>
+                <li class="current"><a style="font-weight:normal" href="{{ url_for('portfolio') }}">My Work</a></li>
+                <li class="current"><a style="font-weight:normal" href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <article id="main">
+
+        <header class="special container">
+            <span class="icon solid fa-mobile-alt"></span>
+            <h2>And finally there's <strong>No Sidebar</strong></h2>
+            <p>Where that in the center faces the nameless horrors alone.</p>
+        </header>
+
+        <!-- One -->
+        <section class="wrapper style4 container">
+
+            <!-- Content -->
+            <div class="content">
+                <section>
+                    <a href="#" class="image featured"><img src="static/images/pic04.jpg" alt=""/></a>
+                    <header>
+                        <h3>Dolore Amet Consequat</h3>
+                    </header>
+                    <p>Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo,
+                        tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam,
+                        mollis at consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum. Morbi mattis
+                        elementum orci, nec dictum massa. Morbi eu faucibus massa. Aliquam massa urna, imperdiet sit
+                        amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta
+                        cursus justo. Cras vel neque eros. Vestibulum diam.</p>
+                    <p>Vestibulum diam quam, mollis at consectetur non, malesuada quis augue. Morbi tincidunt pretium
+                        interdum. Morbi mattis elementum orci, nec dictum porta cursus justo. Quisque ultricies lorem in
+                        ligula condimentum, et egestas turpis sagittis. Cras ac nunc urna. Nullam eget lobortis purus.
+                        Phasellus vitae tortor non est placerat tristique. Sed id sem et massa ornare pellentesque.
+                        Maecenas pharetra porta accumsan. </p>
+                    <p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus.
+                        Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in
+                        laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus, non
+                        hendrerit ipsum arcu tristique est.</p>
+                </section>
+            </div>
+
+        </section>
+    </article>
+    <section id="cta">
+
+        <header>
+            <h2>Got <strong>something</strong> to tell me?</h2>
+        </header>
+        <footer>
+            <ul class="buttons">
+                <li><a href="{{ url_for("contact") }}" class="button primary">Contact Me</a></li>
+            </ul>
+        </footer>
+
+    </section>
+    <!-- Footer -->
+    <footer id="footer">
+
+        <ul class="icons">
+            <li><a href="#" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
+        </ul>
+
+        <ul class="copyright">
+            <li>&copy; 2024 Wing Tat Lee</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="static/assets/js/jquery.min.js"></script>
+<script src="static/assets/js/jquery.dropotron.min.js"></script>
+<script src="static/assets/js/jquery.scrolly.min.js"></script>
+<script src="static/assets/js/jquery.scrollgress.min.js"></script>
+<script src="static/assets/js/jquery.scrollex.min.js"></script>
+<script src="static/assets/js/browser.min.js"></script>
+<script src="static/assets/js/breakpoints.min.js"></script>
+<script src="static/assets/js/util.js"></script>
+<script src="static/assets/js/main.js"></script>
+
+</body>
+</html>

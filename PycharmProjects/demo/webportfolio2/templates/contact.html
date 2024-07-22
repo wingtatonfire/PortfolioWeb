@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Ted's Portfolio</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="static/assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="static/assets/css/noscript.css"/>
+    </noscript>
+    <style>
+        #main {
+            background-image: url("static/images/banner.jpg");
+            background-repeat: no-repeat;
+            background-size: cover; /* Adjust to cover the entire area */
+            min-height: 100vh; /* Ensure it covers the full viewport height */
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="contact is-preload">
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1 id="logo"><a href="{{ url_for("home") }}"><span>Ted's Portfolio</span></a></h1>
+        <nav id="nav">
+            <ul>
+                <li class="current"><a style="font-weight:normal" href="{{ url_for('portfolio') }}">My Work</a></li>
+                <li class="current"><a style="font-weight:normal" href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main -->
+    <article id="main">
+        <header class="special container">
+            <span class="icon solid fa-envelope" style="color: white;"></span>
+            <h2 style="color: white;">Get In Touch</h2>
+            <p style="color: white;">Use the form below to give /dev/null a piece of your mind.</p>
+        </header>
+
+        <!-- One -->
+        <section class="wrapper style4 special container medium red">
+
+            <!-- Content -->
+            <div class="content">
+                <form method="post" action="{{ url_for('home') }}">
+                    <div class="row gtr-50">
+                        <div class="col-6 col-12-mobile">
+                            <input type="text" name="name" placeholder="Name"/>
+                        </div>
+                        <div class="col-6 col-12-mobile">
+                            <input type="email" name="email" placeholder="Email"/>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="subject" placeholder="Subject"/>
+                        </div>
+                        <div class="col-12">
+                            <textarea name="message" placeholder="Message" rows="7"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <ul class="buttons">
+                                <li><input type="submit" class="special" value="Send Message"/></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+    </article>
+
+    <!-- Footer -->
+    <footer id="footer">
+
+        <ul class="icons">
+            <li><a href="#" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
+        </ul>
+
+        <ul class="copyright">
+            <li>&copy; 2024 Wing Tat Lee</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="static/assets/js/jquery.min.js"></script>
+<script src="static/assets/js/jquery.dropotron.min.js"></script>
+<script src="static/assets/js/jquery.scrolly.min.js"></script>
+<script src="static/assets/js/jquery.scrollgress.min.js"></script>
+<script src="static/assets/js/jquery.scrollex.min.js"></script>
+<script src="static/assets/js/browser.min.js"></script>
+<script src="static/assets/js/breakpoints.min.js"></script>
+<script src="static/assets/js/util.js"></script>
+<script src="static/assets/js/main.js"></script>
+
+</body>
+</html>
